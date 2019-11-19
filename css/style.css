@@ -373,9 +373,9 @@ img:hover {
 
  #reld .item > .circle-hold:hover {
     cursor: hand;
-    -webkit-transform: scale(3);
-    -moz-transform: scale(3);
-    transform: scale(3); 
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    transform: scale(1.3); 
 
 }
 
