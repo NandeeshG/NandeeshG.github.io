@@ -2,6 +2,10 @@
 var textWrapper = document.querySelector('.ml9 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+var textWrapper2 = document.querySelector('.ml9 .letters2');
+textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+
 anime.timeline({loop: false})
   .add({
     targets: '.ml9 .letter',
