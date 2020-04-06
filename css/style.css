@@ -3,13 +3,12 @@
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
-	background-color: #1d1d1d;
+	background-color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
-	color: #A2A2A2;
 	height: 100%;
-	min-height: 100% !important;
+    min-height: 100% !important;
 }
 
 html {
@@ -19,6 +18,27 @@ html {
 a:active, a:focus {
     text-decoration: none;
 }
+
+    .ml9 {
+        position: relative;
+        font-weight: 200;
+        font-size: 4em;
+    }
+  
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
 
 a {
     color: #cdcdcd;
@@ -109,6 +129,11 @@ a:focus, a:hover {
     font-size: 70px;
 }
 
+img {
+    border-radius: 50% ;
+    animation: fadein 1s ease-in-out  ;
+}
+/* 
 @-webkit-keyframes bounce {
  0%{-webkit-transform:rotate(0deg)}
     25%{-webkit-transform:rotate(20deg)}
@@ -119,7 +144,7 @@ img:hover {
     -moz-animation: bounce 1.5s;
     -webkit-animation: bounce 1.5s;
     animation: bounce 1.5s;
-}
+} */
 
 
 .background1 { background-color: #212121; }
@@ -221,8 +246,11 @@ img:hover {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-	font-weight: 100;
-	color: #fff;
+	/* font-family: monospace ; */
+    font-weight: 100;
+    font-size: 50px ;
+    margin-top: 70px ;
+    color: #000;
 }
 
 .lead {
@@ -232,7 +260,15 @@ img:hover {
 .lead strong {
 	color: #fff;
 }
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 
 /* =Thumbnails
 -------------------------------------------------------------- */
@@ -299,7 +335,6 @@ img:hover {
 	background-color: transparent;
     top: 0;
     left: 0;
-    background-image: url("../images/banner4.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
@@ -364,11 +399,12 @@ img:hover {
     -webkit-transition: all 300ms;
     -moz-transition: all 300ms;
     transition: all 300ms;
+    animation: fadein2 1s ease-in-out ;
 }
 
 #reld .item:hover {
 
-	-webkit-animation: rotation 1s  linear;
+	-webkit-animation: bounce 0.6s  linear;
 }
 
  #reld .item > .circle-hold:hover {
@@ -380,12 +416,12 @@ img:hover {
 }
 
 @-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(359deg);
-		}
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
 }
 
  #reld .item > .circle-hold > i{
@@ -490,3 +526,24 @@ footer hr {
     .jumbotron.jumbotron-register h1 { font-size:45px; }
 }
 
+
+@keyframes fadein {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+@keyframes fadein2 {
+    0% {
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
